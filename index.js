@@ -20,6 +20,10 @@ app.use(cors({
   origin: ['http://localhost:3000', 'http://localhost:3001', process.env.CLIENT_URL]
 }));
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the API');
+});
+
 app.use("/api", router);
 app.use('/api', ticketsRouter);
 app.use('/api/payment', paymentRouter);
@@ -29,10 +33,7 @@ app.use(errorMiddleware);
 
 const start = async () => {
   try {
-    await mongoose.connect(process.env.DB_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    });
+    await mongoose.connect(process.env.DB_URL);
     app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
   } catch (e) {
     console.error('Failed to connect to MongoDB', e);
