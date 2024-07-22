@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
-const router = require('./router/index'); // Маршруты аутентификации и другие маршруты
+const router = require('./router/index');
 const ticketsRouter = require('./router/ticketRoutes');
 const paymentRouter = require('./router/paymentRoutes');
 const errorMiddleware = require('./middlewares/error-middleware');
@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3000', 'http://localhost:3001', 'https://bus-travel.herokuapp.com']
+  origin: ['http://localhost:3000', 'http://localhost:3001', process.env.CLIENT_URL]
 }));
 
 app.use("/api", router);
@@ -35,7 +35,7 @@ const start = async () => {
     });
     app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
   } catch (e) {
-    console.log(e);
+    console.error('Failed to connect to MongoDB', e);
   }
 };
 
