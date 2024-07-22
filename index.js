@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3000', 'http://localhost:3001'], // Разрешение запросов из нескольких источников
+  origin: ['http://localhost:3000', 'http://localhost:3001', 'https://your-app.herokuapp.com']
 }));
 
 app.use("/api", router);
