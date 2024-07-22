@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "value": "Berlin",
+    "ukrainian": "Берлін",
+    "lng": 13.405,
+    "lat": 52.52
+  },
+  {
+    "id": 2,
+    "value": "Düsseldorf",
+    "ukrainian": "Дюссельдорф",
+    "lng": 6.773,
+    "lat": 51.227
+  },
+  {
+    "id": 3,
+    "value": "Kyiv",
+    "ukrainian": "Київ",
+    "lng": 30.5234,
+    "lat": 50.4501
+  },
+  {
+    "id": 4,
+    "value": "Warsaw",
+    "ukrainian": "Варшава",
+    "lng": 21.0122,
+    "lat": 52.2297
+  },
+  {
+    "id": 5,
+    "value": "Paris",
+    "ukrainian": "Париж",
+    "lng": 2.3522,
+    "lat": 48.8566
+  },
+  {
+    "id": 6,
+    "value": "London",
+    "ukrainian": "Лондон",
+    "lng": -0.1276,
+    "lat": 51.5074
+  },
+  {
+    "id": 7,
+    "value": "Amsterdam",
+    "ukrainian": "Амстердам",
+    "lng": 4.9041,
+    "lat": 52.3676
+  },
+  {
+    "id": 8,
+    "value": "Madrid",
+    "ukrainian": "Мадрид",
+    "lng": -3.7038,
+    "lat": 40.4168
+  },
+  {
+    "id": 9,
+    "value": "Rome",
+    "ukrainian": "Рим",
+    "lng": 12.4964,
+    "lat": 41.9028
+  },
+  {
+    "id": 10,
+    "value": "Vienna",
+    "ukrainian": "Відень",
+    "lng": 16.3738,
+    "lat": 48.2082
+  },
+  {
+    "id": 11,
+    "value": "Barcelona",
+    "ukrainian": "Барселона",
+    "lng": 2.1734,
+    "lat": 41.3851
+  },
+  {
+    "id": 12,
+    "value": "Milan",
+    "ukrainian": "Мілан",
+    "lng": 9.19,
+    "lat": 45.4642
+  },
+  {
+    "id": 13,
+    "value": "Budapest",
+    "ukrainian": "Будапешт",
+    "lng": 19.0402,
+    "lat": 47.4979
+  },
+  {
+    "id": 14,
+    "value": "Prague",
+    "ukrainian": "Прага",
+    "lng": 14.4378,
+    "lat": 50.0755
+  },
+  {
+    "id": 15,
+    "value": "Hamburg",
+    "ukrainian": "Гамбург",
+    "lng": 9.9937,
+    "lat": 53.5511
+  },
+  {
+    "id": 16,
+    "value": "Munich",
+    "ukrainian": "Мюнхен",
+    "lng": 11.582,
+    "lat": 48.1351
+  },
+  {
+    "id": 17,
+    "value": "Frankfurt",
+    "ukrainian": "Франкфурт",
+    "lng": 8.6821,
+    "lat": 50.1109
+  },
+  {
+    "id": 18,
+    "value": "Lviv",
+    "ukrainian": "Львів",
+    "lng": 24.0315,
+    "lat": 49.8397
+  },
+  {
+    "id": 19,
+    "value": "Odesa",
+    "ukrainian": "Одеса",
+    "lng": 30.7233,
+    "lat": 46.4825
+  },
+  {
+    "id": 20,
+    "value": "Kharkiv",
+    "ukrainian": "Харків",
+    "lng": 36.2312,
+    "lat": 49.9935
+  },
+  {
+    "id": 21,
+    "value": "Dnipro",
+    "ukrainian": "Дніпро",
+    "lng": 35.0456,
+    "lat": 48.4647
+  },
+  {
+    "id": 22,
+    "value": "Zaporizhzhia",
+    "ukrainian": "Запоріжжя",
+    "lng": 35.1396,
+    "lat": 47.8388
+  },
+  {
+    "id": 23,
+    "value": "Khmelnytskyi",
+    "ukrainian": "Хмельницький",
+    "lng": 26.585,
+    "lat": 49.4216
+  },
+  {
+    "id": 24,
+    "value": "Chernivtsi",
+    "ukrainian": "Чернівці",
+    "lng": 25.9333,
+    "lat": 48.2915
+  },
+  {
+    "id": 25,
+    "value": "Vinnytsia",
+    "ukrainian": "Вінниця",
+    "lng": 28.481,
+    "lat": 49.2328
+  }
+]
