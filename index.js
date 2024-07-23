@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
@@ -14,15 +13,14 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 const corsOptions = {
-  origin: '*', // Разрешаем все источники
+  origin: 'https://bus-travel-transfer.netlify.app', // Разрешаем только запросы с твоего фронтенда
   credentials: true,
+  optionsSuccessStatus: 200 // Для поддержки старых браузеров
 };
+
 app.use(cors(corsOptions));
-
-
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
   res.send('Welcome to the API');
