@@ -54,13 +54,8 @@ class TokenService {
     }
   }
 
-  async findToken(cookies) {
+  async findToken(refreshToken) {
     try {
-      const refreshToken = this.extractTokenFromCookies(cookies);
-      if (!refreshToken) {
-        throw new Error('No refresh token found in cookies');
-      }
-
       console.log('Finding token with refreshToken:', refreshToken);
       const token = await tokenModel.findOne({ refreshToken });
       console.log('Token found:', token);
@@ -80,15 +75,6 @@ class TokenService {
       console.error('Error removing token:', e);
       return null;
     }
-  }
-
-  extractTokenFromCookies(cookies) {
-    const tokenCookie = cookies.split('; ').find(row => row.startsWith('token='));
-    if (!tokenCookie) {
-      console.error('Token cookie not found');
-      return null;
-    }
-    return tokenCookie.split('=')[1];
   }
 }
 

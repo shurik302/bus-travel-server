@@ -22,12 +22,10 @@ class UserController {
   async login(req, res, next) {
     try {
       const { email, password } = req.body;
-      console.log(`Login attempt for email: ${email}`);
       const userData = await userService.login(email, password);
       res.cookie("refreshToken", userData.refreshToken, { maxAge: 30 * 24 * 60 * 60 * 1000, httpOnly: true });
       return res.json(userData);
     } catch (e) {
-      console.error(`Login error for email ${req.body.email}:`, e);
       next(e);
     }
   }
@@ -50,12 +48,12 @@ class UserController {
       if (!user) {
         return res.status(400).json({ message: 'Invalid activation link' });
       }
-  
+
       const tokens = tokenService.generateTokens({ id: user.id, email: user.email });
       await tokenService.saveToken(user.id, tokens.refreshToken);
-  
+
       console.log('Activation complete for user:', user.id);
-  
+
       // Виконати редирект на клієнтську частину після успішної активації
       const redirectUrl = `${process.env.CLIENT_URL}/activation-success?token=${tokens.accessToken}`;
       res.redirect(302, redirectUrl);
@@ -82,7 +80,7 @@ class UserController {
 
       console.log('Finding token in database:', refreshToken);
       const tokenFromDb = await tokenService.findToken(refreshToken);
-      
+
       if (!tokenFromDb) {
         console.error('Token not found');
         return res.status(401).json({ message: 'Token not found' });
