@@ -20,7 +20,7 @@ app.use(cors({
   credentials: true,
   origin: ['http://localhost:3000',
     'http://localhost:3001',
-    'https://main--bus-travel-transfer.netlify.app',
+    'https://bus-travel-transfer.netlify.app/',
     process.env.CLIENT_URL,], // Разрешение запросов из нескольких источников
 }));
 
