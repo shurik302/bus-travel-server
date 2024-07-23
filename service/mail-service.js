@@ -38,7 +38,7 @@ class MailService {
         text: "",
         html: `<div style="font-family: 'Open Sans', sans-serif;">
           <div style="text-align: center; padding: 20px; background-color: #1e92ff;">
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">
+            <a href="https://bus-travel-transfer.netlify.app/">
               <img src="./logo_big.png" style="height: 80px;" />
             </a>
           </div>

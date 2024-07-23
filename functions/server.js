@@ -18,7 +18,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3000', 'http://localhost:3001'], // Разрешение запросов из нескольких источников
+  origin: ['http://localhost:3000',
+    'http://localhost:3001',
+    'https://main--bus-travel-transfer.netlify.app',
+    process.env.CLIENT_URL,], // Разрешение запросов из нескольких источников
 }));
 
 app.use("/api", router);
@@ -32,7 +35,7 @@ mongoose.connect(process.env.DB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-.then(() => console.log('MongoDB connected'))
-.catch(e => console.log(e));
+  .then(() => console.log('MongoDB connected'))
+  .catch(e => console.log(e));
 
 module.exports.handler = serverless(app);
