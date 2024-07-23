@@ -14,14 +14,11 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 const corsOptions = {
+  origin: '*', // Разрешаем все источники
   credentials: true,
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'https://bus-travel-transfer.netlify.app/',
-    process.env.CLIENT_URL,
-  ],
 };
+app.use(cors(corsOptions));
+
 
 app.use(express.json());
 app.use(cookieParser());
